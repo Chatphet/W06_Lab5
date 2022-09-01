@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script>
+        function addData() {
+            var textInput = document.getElementById("Name");
+            var textInput1 = document.getElementById("Address");
+            var textInput2 = document.getElementById("Numphone");
+            var Name = textInput.value;
+            var Address = textInput1.value;
+            var Numphone = textInput2.value;
+
+            var tr = document.createElement("tr");
+            var tab = document.getElementById("playlist");
+            var td = document.createElement("td");
+            td.innerHTML = Name;
+            tab.appendChild(tr);
+            tab.appendChild(td);
+
+            var tab = document.getElementById("playlist");
+            var td = document.createElement("td");
+            td.innerHTML = Address;
+            tab.appendChild(td);
+
+            var tab = document.getElementById("playlist");
+            var td = document.createElement("td");
+            td.innerHTML = Numphone;
+            tab.appendChild(td);
+        }
+    </script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        ชื่อลูกค้า :
+        <input type="text" id="Name"><br><br>
+        ที่อยู่ :
+        <input type="text" id="Address"><br><br>
+        โทรศัพท์ :
+        <input type="text" id="Numphone"><br><br>
+        <input type="button" id="addButton" value="เพิ่ม" onclick="addData()">
+    </form>
+
+    <table id = "playlist">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+        </tr>
+    </table>
+
+</body>
+
+</html>
